@@ -72,11 +72,6 @@ node server.js
 
 ---
 
-## 🌐 Running the Project
-
-* Frontend: `http://localhost:5173`
-* Backend: `http://localhost:5000`
-
 ---
 
 
