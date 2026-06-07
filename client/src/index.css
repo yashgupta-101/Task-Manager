@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+
+body{
+
+background:black;
+
+min-height:100vh;
+
+font-family: 'Poppins',sans-serif;
+
+color:white;
+
+}
+
+}
+
+@layer components {
+
+.glass-card{
+
+@apply bg-black/80 backdrop-blur-lg border border-yellow-500/30 shadow-xl;
+
+}
+
+.glass-card-hover{
+
+@apply transition-all duration-300 hover:bg-black/90 hover:border-yellow-500/50 hover:scale-[1.02] hover:shadow-2xl;
+
+}
+
+.btn-primary{
+
+@apply bg-gradient-to-r from-yellow-700 to-yellow-500 text-white font-semibold py-2 px-4 rounded-lg
+transition-all duration-300 transform hover:scale-105
+hover:shadow-lg hover:shadow-yellow-500/30
+active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+
+}
+
+.btn-secondary{
+
+@apply bg-gray-800/80 backdrop-blur-sm text-white font-semibold py-2 px-4 rounded-lg
+transition-all duration-300 hover:bg-gray-700 hover:scale-105;
+
+}
+
+.input-modern{
+
+@apply w-full px-4 py-2 bg-black/50 border border-yellow-500/30 rounded-lg
+text-white placeholder-yellow-300/50
+focus:outline-none focus:ring-2 focus:ring-yellow-500
+focus:border-transparent transition-all duration-300;
+
+}
+
+.task-card{
+
+@apply rounded-xl p-4 mb-3 transition-all duration-300;
+
+background:rgba(0,0,0,.8);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(168,85,247,.3);
+
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+animation:slideIn .3s ease-out;
+
+}
+
+.animate-slideIn{
+
+animation:slideIn .3s ease-out;
+
+}
+
+.animate-pulse-fast{
+
+animation:pulse .5s ease-in-out;
+
+}
+
+.animate-glow{
+
+animation:glow 2s ease-in-out infinite;
+
+}
+
+}
+
+/* Animations */
+
+@keyframes slideIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+@keyframes glow{
+
+0%,100%{
+
+box-shadow:0 0 5px rgba(168,85,247,.3);
+
+}
+
+50%{
+
+box-shadow:0 0 20px rgba(168,85,247,.6);
+
+}
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#a855f7;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#9333ea;
+
+}
+
+/* Date Picker */
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+
+filter:invert(100%);
+
+cursor:pointer;
+
+}

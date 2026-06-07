@@ -1,0 +1,13 @@
+# Query: Task Sync
+# ContextLines: 1
+
+2 results - 2 files
+
+README.md:
+  1: # Personal Task Manager - TASK Master
+  2  
+
+client\src\App.jsx:
+  91              <h1 className="text-5xl md:text-6xl font-bold leading-[1.2] pb-3 bg-gradient-to-r from-yellow-500 to-yellow-300 bg-clip-text text-transparent">
+  92:               TASK Master
+  93              </h1>
